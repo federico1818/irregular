@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 import { VerbListComponent } from './verb-list/verb-list.component'
+import { MaterialModule } from './../material/material.module'
 
 
 @NgModule({
@@ -9,7 +10,8 @@ import { VerbListComponent } from './verb-list/verb-list.component'
         VerbListComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MaterialModule
     ],
     exports: [
         VerbListComponent

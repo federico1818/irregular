@@ -1,7 +1,21 @@
-<h2>Verbs</h2>
+<mat-table [dataSource]="verbs">
+    
+    <ng-container matColumnDef="infinitive">
+        <mat-header-cell *matHeaderCellDef>Infinitive</mat-header-cell>
+        <mat-cell *matCellDef="let verb">{{ verb.infinitive.text }} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="simple_past">
+        <mat-header-cell *matHeaderCellDef>Simple past</mat-header-cell>
+        <mat-cell *matCellDef="let verb">{{ verb.simple_past.text }} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="past_participle">
+        <mat-header-cell *matHeaderCellDef>past_participle</mat-header-cell>
+        <mat-cell *matCellDef="let verb">{{ verb.past_participle.text }} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="['infinitive', 'simple_past', 'past_participle']"></mat-header-row>
+    <mat-row *matRowDef="let verb; columns: ['infinitive', 'simple_past', 'past_participle']"></mat-row>
 
-<ul>
-    <li *ngFor="let verb of verbs | async">
-        <span>{{ verb.infinitive.text }}</span>
-    </li>
-</ul>
+</mat-table>

@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 
 import { MaterialModule } from './material/material.module'
+import { VerbModule } from './verb/verb.module'
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import { MaterialModule } from './material/material.module'
         BrowserModule,
         BrowserAnimationsModule,
         MaterialModule,
+        VerbModule,
         AppRoutingModule,
     ],
     providers: [],

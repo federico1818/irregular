@@ -27,3 +27,9 @@ cp src/environments/environment.example.ts src/environments/environment.prod.ts
 ```sh
 ng add @angular/fire
 ```
+
+3. Upload application to firebase hosting
+
+```sh
+ng deploy
+```

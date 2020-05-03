@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core'
-import { AngularFirestore } from '@angular/fire/firestore'
 import { MatTableDataSource } from '@angular/material/table'
+import { AngularFirestore } from '@angular/fire/firestore'
 
 import { map } from 'rxjs/operators'
-import { Verb } from '../verb'
-import { Tense } from '../tense'
+import { Verb } from '../../verb'
+import { Tense } from '../../tense'
 
 @Component({
     selector: 'app-verb-list',

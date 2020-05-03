@@ -1,4 +1,10 @@
-<mat-table [dataSource]="verbs">
+<mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input type="text" matInput placeholder="Search" (keyup)="filter($event)">
+    <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+
+<mat-table [dataSource]="dataSource">
     
     <ng-container matColumnDef="infinitive">
         <mat-header-cell *matHeaderCellDef>Infinitive</mat-header-cell>
@@ -11,7 +17,7 @@
     </ng-container>
     
     <ng-container matColumnDef="past_participle">
-        <mat-header-cell *matHeaderCellDef>past_participle</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef>Past participle</mat-header-cell>
         <mat-cell *matCellDef="let verb">{{ verb.past_participle.text }} </mat-cell>
     </ng-container>
   

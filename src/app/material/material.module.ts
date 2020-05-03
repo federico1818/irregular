@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common'
 
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatTableModule } from '@angular/material/table'
+import { MatIconModule } from '@angular/material/icon'
+import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field'
+
 
 
 @NgModule({
@@ -10,11 +14,17 @@ import { MatTableModule } from '@angular/material/table'
     imports: [
         CommonModule,
         MatToolbarModule,
-        MatTableModule
+        MatTableModule,
+        MatIconModule,
+        MatInputModule,
+        MatFormFieldModule
     ],
     exports: [
         MatToolbarModule,
-        MatTableModule
+        MatTableModule,
+        MatIconModule,
+        MatInputModule,
+        MatFormFieldModule
     ]
 })
 

@@ -14,7 +14,7 @@ npm install
 cp src/environments/environment.example.ts src/environments/environment.ts
 ```
 
-## Deploy
+## Docker to deploy
 
 1. Copy environment file
 
@@ -22,14 +22,32 @@ cp src/environments/environment.example.ts src/environments/environment.ts
 cp src/environments/environment.example.ts src/environments/environment.prod.ts
 ```
 
-2. Add fire to project
+2. Pull image
 
 ```sh
-ng add @angular/fire
+docker pull andreysenov/firebase-tools
 ```
 
-3. Upload application to firebase hosting
+3. Execute image
 
 ```sh
-ng deploy
+docker run --name firebase -d -p 9005:9005 -v ${PWD}:/usr/src andreysenov/firebase-tools tail -f /dev/null
 ```
+
+4. Enter the container
+
+```sh
+docker exec -it firebase sh
+```
+
+5. Login in firebase
+
+```sh
+firebase login
+```
+
+6. Deploy application
+
+```sh
+firebase deploy --project <alias_or_project_id>
+``` 

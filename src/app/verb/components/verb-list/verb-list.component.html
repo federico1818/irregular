@@ -1,6 +1,6 @@
 <mat-form-field appearance="outline">
     <mat-label>Search</mat-label>
-    <input type="text" matInput placeholder="Search" (keyup)="filter($event)">
+    <input type="text" matInput placeholder="Search" (keyup)="filter($event)" autocomplete="off">
     <mat-icon matSuffix>search</mat-icon>
 </mat-form-field>
 
@@ -8,17 +8,26 @@
     
     <ng-container matColumnDef="infinitive">
         <mat-header-cell *matHeaderCellDef>Infinitive</mat-header-cell>
-        <mat-cell *matCellDef="let verb">{{ verb.infinitive.text }} </mat-cell>
+        <mat-cell *matCellDef="let verb">
+            <div class="text">{{ verb.infinitive.text }}</div>
+            <div class="phonetics">{{ verb.infinitive.phonetics }}</div>
+        </mat-cell>
     </ng-container>
     
     <ng-container matColumnDef="simple_past">
         <mat-header-cell *matHeaderCellDef>Simple past</mat-header-cell>
-        <mat-cell *matCellDef="let verb">{{ verb.simple_past.text }} </mat-cell>
+        <mat-cell *matCellDef="let verb">
+            <div class="text">{{ verb.simple_past.text }}</div>
+            <div class="phonetics">{{ verb.simple_past.phonetics }}</div>
+        </mat-cell>
     </ng-container>
     
     <ng-container matColumnDef="past_participle">
         <mat-header-cell *matHeaderCellDef>Past participle</mat-header-cell>
-        <mat-cell *matCellDef="let verb">{{ verb.past_participle.text }} </mat-cell>
+        <mat-cell *matCellDef="let verb">
+            <div class="text">{{ verb.past_participle.text }}</div>
+            <div class="phonetics">{{ verb.past_participle.phonetics }}</div>
+        </mat-cell>
     </ng-container>
   
     <mat-header-row *matHeaderRowDef="['infinitive', 'simple_past', 'past_participle']"></mat-header-row>

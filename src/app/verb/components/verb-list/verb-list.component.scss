@@ -13,3 +13,17 @@ mat-cell, mat-header-cell, mat-footer-cell {
 mat-cell, mat-header-cell, mat-footer-cell {
     font-size: 12px;
 }
+
+mat-cell {
+    flex-direction: column;
+}
+
+.phonetics {
+    color: rgba(255, 255, 255, .7);
+}
+
+@media(min-width: 425px) {
+    .text {
+        font-size: 14px;
+    }
+}

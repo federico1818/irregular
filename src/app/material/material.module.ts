@@ -6,6 +6,7 @@ import { MatTableModule } from '@angular/material/table'
 import { MatIconModule } from '@angular/material/icon'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatSidenavModule } from '@angular/material/sidenav'
 
 
 
@@ -17,14 +18,16 @@ import { MatFormFieldModule } from '@angular/material/form-field'
         MatTableModule,
         MatIconModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatSidenavModule
     ],
     exports: [
         MatToolbarModule,
         MatTableModule,
         MatIconModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatSidenavModule
     ]
 })
 

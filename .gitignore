@@ -54,3 +54,6 @@ src/environments/environment.prod.ts
 .firebaserc
 firebase.json
 firebase-debug.log
+
+# Icons
+src/assets/icons

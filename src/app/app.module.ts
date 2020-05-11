@@ -10,7 +10,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 
 import { MaterialModule } from './material/material.module'
-import { VerbModule } from './verb/verb.module'
+import { VerbModule } from './verb/verb.module';
+import { ServiceWorkerModule } from '@angular/service-worker'
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { VerbModule } from './verb/verb.module'
         MaterialModule,
         VerbModule,
         AppRoutingModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ],
     providers: [],
     bootstrap: [AppComponent]

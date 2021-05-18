@@ -4,7 +4,9 @@
     <mat-icon matSuffix>search</mat-icon>
 </mat-form-field>
 
-<mat-table [dataSource]="dataSource">
+<mat-spinner *ngIf="loading"></mat-spinner>
+
+<mat-table [dataSource]="dataSource" *ngIf="!loading">
     
     <ng-container matColumnDef="infinitive">
         <mat-header-cell *matHeaderCellDef>Infinitive</mat-header-cell>

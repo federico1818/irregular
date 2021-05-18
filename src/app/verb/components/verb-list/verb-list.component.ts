@@ -14,6 +14,7 @@ import { Tense } from '../../tense'
 
 export class VerbListComponent implements OnInit {
     public dataSource: MatTableDataSource<Verb> = new MatTableDataSource<Verb>()
+    public loading: boolean = true
 
     constructor(
         private afs: AngularFirestore
@@ -33,6 +34,7 @@ export class VerbListComponent implements OnInit {
             })
         ).subscribe(res => {
             this.dataSource.data = res
+            this.loading = false
         })
         this.dataSource.filterPredicate = (data: Verb, filter: string) => {
             const value = data.infinitive.text.trim().toLocaleLowerCase() +
